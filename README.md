@@ -21,15 +21,18 @@ A pure Python prompt generation engine that supports multiple LLM formats (DeepS
 git clone <repository-url>
 cd prompt_engine
 
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+# Create conda environment (Python 3.12 is recommended)
+conda create -n prompt-bank python=3.12 -y
+conda activate prompt-bank
 
 # Install dependencies
 pip install -r requirements.txt
 
 # Run development server
 python main.py
+
+# Deactivate when done
+# conda deactivate
 ```
 
 ### Usage
@@ -56,7 +59,7 @@ print(response.formatted_prompt)
 
 ```bash
 # Generate prompt
-curl -X POST "http://localhost:8000/generate" \
+curl -X POST "http://localhost:8800/generate" \
   -H "Content-Type: application/json" \
   -d '{
     "model_id": "deepseek-r1-0528-qwen3-8b",
@@ -65,10 +68,10 @@ curl -X POST "http://localhost:8000/generate" \
   }'
 
 # Get supported models
-curl "http://localhost:8000/models"
+curl "http://localhost:8800/models"
 
 # Health check
-curl "http://localhost:8000/health"
+curl "http://localhost:8800/health"
 ```
 
 ## Project Structure
@@ -119,7 +122,7 @@ pytest tests/test_engine.py
 
 ```bash
 # Hot reload templates (development)
-curl -X POST "http://localhost:8000/reload"
+curl -X POST "http://localhost:8800/reload"
 ```
 
 ### Docker Development
@@ -130,7 +133,7 @@ docker-compose up --build
 
 # Run in production mode
 docker build -t prompt-engine .
-docker run -p 8000:8000 prompt-engine
+docker run -p 8800:8800 prompt-engine
 ```
 
 ## Configuration
@@ -140,7 +143,7 @@ docker run -p 8000:8000 prompt-engine
 ```bash
 # Application settings
 APP_HOST=0.0.0.0
-APP_PORT=8000
+APP_PORT=8800
 APP_RELOAD=true
 
 # Template settings
