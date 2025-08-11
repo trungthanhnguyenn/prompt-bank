@@ -19,10 +19,10 @@ A pure Python prompt generation engine that supports multiple LLM formats (DeepS
 ```bash
 # Clone repository
 git clone <repository-url>
-cd prompt_engine
+cd prompt-bank
 
-# Create conda environment (Python 3.12 is recommended)
-conda create -n prompt-bank python=3.12 -y
+# Create conda environment (Python 3.10 is recommended)
+conda create -n prompt-bank python=3.10 -y
 conda activate prompt-bank
 
 # Install dependencies
