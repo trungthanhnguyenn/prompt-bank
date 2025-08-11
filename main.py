@@ -347,7 +347,7 @@ if __name__ == "__main__":
     import uvicorn
     
     host = get_env_var("APP_HOST", "0.0.0.0")
-    port = int(get_env_var("APP_PORT", "8000"))
+    port = int(get_env_var("APP_PORT", "8800"))
     reload = get_env_var("APP_RELOAD", "false").lower() == "true"
     
     logger.info(f"Starting server on {host}:{port}")
