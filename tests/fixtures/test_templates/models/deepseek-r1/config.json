@@ -1,0 +1,22 @@
+{
+    "model_id": "deepseek-r1-0528-qwen3-8b",
+    "family": "deepseek-r1",
+    "display_name": "DeepSeek R1 0528 (Qwen3 8B)",
+    "tokens": {
+        "bos": "<|im_start|>",
+        "eos": "<|im_end|>",
+        "user": "<|im_start|>user\n",
+        "assistant": "<|im_start|>assistant\n",
+        "system": "<|im_start|>system\n"
+    },
+    "limits": {
+        "max_context": 32768,
+        "max_system": 2048
+    },
+    "inference": {
+        "temperature": 0.6,
+        "top_p": 0.95,
+        "stop_sequences": ["<|im_end|>"]
+    },
+    "capabilities": ["reasoning", "long_context", "chinese"]
+}

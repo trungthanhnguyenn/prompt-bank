@@ -1,0 +1,13 @@
+{%- if conversation_history -%}
+{{ tokens.bos }}
+{%- for turn in conversation_history -%}
+{{ tokens.user }}{{ turn.user }}{{ tokens.eos }}
+{{ tokens.assistant }}{{ turn.assistant }}{{ tokens.eos }}
+{%- endfor -%}
+{%- endif -%}
+{{ tokens.bos }}
+{%- if system_prompt -%}
+{{ tokens.system }}{{ system_prompt }}{{ tokens.eos }}
+{%- endif -%}
+{{ tokens.user }}{{ user_input }}{{ tokens.eos }}
+{{ tokens.assistant }}

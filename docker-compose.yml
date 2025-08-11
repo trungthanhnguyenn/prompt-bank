@@ -1,0 +1,21 @@
+services:
+  prompt-engine:
+    build: .
+    ports:
+      - "8800:8800"
+    volumes:
+      - ./templates:/app/templates
+      - ./src:/app/src
+      - ./logs:/app/logs
+      - ./backups:/app/backups
+    environment:
+      - APP_RELOAD=true
+      - LOG_LEVEL=DEBUG
+      - TEMPLATES_DIR=templates
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8800", "--reload"]
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8800/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

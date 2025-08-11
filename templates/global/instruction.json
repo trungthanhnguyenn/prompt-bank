@@ -1,0 +1,16 @@
+{
+    "id": "global.instruction",
+    "name": "Task Instructions",
+    "category": "instruction",
+    "priority": 50,
+    "content": {
+        "instruction": "Follow instructions carefully and complete tasks accurately.",
+        "rules": [
+            "Read instructions thoroughly before responding",
+            "Complete all requested tasks",
+            "Provide structured and organized responses",
+            "Ask for clarification if instructions are unclear"
+        ]
+    },
+    "applies_to": ["instruction", "chat"]
+}

@@ -1,0 +1,13 @@
+{%- if system_prompt -%}
+{{ tokens.header_start }}{{ tokens.system }}{{ tokens.header_end }}
+{{ system_prompt }}{{ tokens.eot }}
+{%- endif -%}
+{{ tokens.header_start }}{{ tokens.user }}{{ tokens.header_end }}
+Please solve this step by step: {{ user_input }}{{ tokens.eot }}
+{{ tokens.header_start }}{{ tokens.assistant }}{{ tokens.header_end }}
+Let me think about this step by step:
+{%- if conversation_history -%}
+{%- for turn in conversation_history -%}
+Previous context: {{ turn.user }} -> {{ turn.assistant }}
+{%- endfor -%}
+{%- endif -%}

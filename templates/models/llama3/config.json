@@ -1,0 +1,23 @@
+{
+    "model_id": "llama3-8b-instruct",
+    "family": "llama3",
+    "display_name": "Llama 3 8B Instruct",
+    "tokens": {
+        "header_start": "<|start_header_id|>",
+        "header_end": "<|end_header_id|>",
+        "eot": "<|eot_id|>",
+        "user": "user",
+        "assistant": "assistant",
+        "system": "system"
+    },
+    "limits": {
+        "max_context": 8192,
+        "max_system": 1024
+    },
+    "inference": {
+        "temperature": 0.6,
+        "top_p": 0.9,
+        "stop_sequences": ["<|eot_id|>"]
+    },
+    "capabilities": ["reasoning", "instruction_following", "function_calling"]
+}

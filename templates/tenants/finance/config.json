@@ -1,0 +1,6 @@
+{
+    "tenant_id": "finance",
+    "name": "Financial Services Corp",
+    "domain": "finance",
+    "compliance": ["SEC", "financial_advice_disclaimer"]
+}

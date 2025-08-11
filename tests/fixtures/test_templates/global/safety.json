@@ -1,0 +1,15 @@
+{
+    "id": "global.safety",
+    "name": "Safety Guidelines",
+    "category": "safety",
+    "priority": 999,
+    "content": {
+        "instruction": "Always prioritize user safety.",
+        "rules": [
+            "Never provide harmful advice",
+            "Respect privacy"
+        ]
+    },
+    "immutable": true,
+    "applies_to": ["chat", "reasoning", "instruction"]
+}

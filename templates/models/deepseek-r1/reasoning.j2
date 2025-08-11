@@ -1,0 +1,12 @@
+{%- if system_prompt -%}
+{{ tokens.system }}{{ system_prompt }}{{ tokens.eos }}
+{%- endif -%}
+{{ tokens.user }}Please solve this step by step: {{ user_input }}{{ tokens.eos }}
+{{ tokens.assistant }}{{ tokens.think_start }}
+Let me think about this step by step:
+{%- if conversation_history -%}
+{%- for turn in conversation_history -%}
+Previous context: {{ turn.user }} -> {{ turn.assistant }}
+{%- endfor -%}
+{%- endif -%}
+{{ tokens.think_end }}

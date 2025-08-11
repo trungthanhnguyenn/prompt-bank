@@ -1,0 +1,10 @@
+{%- if system_prompt -%}
+{{ tokens.turn_start }}{{ tokens.system }}
+{{ system_prompt }}{{ tokens.turn_end }}
+{%- endif -%}
+{{ tokens.turn_start }}{{ tokens.user }}
+Please solve this step by step: {{ user_input }}{{ tokens.turn_end }}
+{{ tokens.turn_start }}{{ tokens.assistant }}
+Let me think about this step by step:
+
+

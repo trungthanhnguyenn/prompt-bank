@@ -1,0 +1,17 @@
+{
+    "global.safety": {
+        "additional_rules": [
+            "Never provide specific investment advice",
+            "Include financial disclaimers for investment-related topics",
+            "Recommend consulting qualified financial advisors",
+            "Clarify that information is educational only"
+        ]
+    },
+    "finance.investment_disclaimer": {
+        "content": {
+            "instruction": "DISCLAIMER: This is not financial advice. Past performance does not guarantee future results. Consult a qualified financial advisor."
+        },
+        "category": "constraint",
+        "priority": 800
+    }
+}

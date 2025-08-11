@@ -1,0 +1,21 @@
+{
+    "id": "global.base",
+    "name": "Base Assistant",
+    "category": "system",
+    "priority": 0,
+    "content": {
+        "instruction": "You are a helpful AI assistant. Respond in {{ user_language }} for a {{ expertise_level }} audience if provided.",
+        "rules": [
+            "Be helpful",
+            "Be accurate"
+        ]
+    },
+    "variables": ["current_date", "user_language", "expertise_level"],
+    "model_overrides": {
+        "deepseek-r1": {
+            "instruction": "该助手为DeepSeek-R1。今天是{{ current_date }}。Respond in {{ user_language }} for a {{ expertise_level }} audience if provided."
+        }
+    },
+    "immutable": false,
+    "applies_to": ["chat", "reasoning", "instruction"]
+}

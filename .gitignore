@@ -1,0 +1,56 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+pip-wheel-metadata/
+
+# Logs
+logs/
+*.log
+
+# Test and coverage artifacts
+.coverage
+.coverage.*
+.pytest_cache/
+.cache/
+htmlcov/
+coverage.xml
+junit.xml
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# IDE/editor
+.vscode/
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.*
+!env.example
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Temporary files
+tmp/
+*.swp
+*.swo
+*.bak
+
+

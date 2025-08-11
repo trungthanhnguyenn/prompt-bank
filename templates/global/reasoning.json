@@ -1,0 +1,16 @@
+{
+    "id": "global.reasoning",
+    "name": "Reasoning Enhancement",
+    "category": "instruction",
+    "priority": 100,
+    "content": {
+        "instruction": "When solving problems, think step by step and show your reasoning process.",
+        "rules": [
+            "Break down complex problems into smaller steps",
+            "Explain your thought process clearly",
+            "Verify your answers when possible",
+            "Show intermediate calculations"
+        ]
+    },
+    "applies_to": ["reasoning", "math", "logic"]
+}

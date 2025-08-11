@@ -1,0 +1,22 @@
+{
+    "model_id": "gemma-2-9b-it",
+    "family": "gemma",
+    "display_name": "Gemma 2 9B Instruct",
+    "tokens": {
+        "turn_start": "<start_of_turn>",
+        "turn_end": "<end_of_turn>",
+        "user": "user",
+        "assistant": "model",
+        "system": "system"
+    },
+    "limits": {
+        "max_context": 8192,
+        "max_system": 1024
+    },
+    "inference": {
+        "temperature": 0.7,
+        "top_p": 0.9,
+        "stop_sequences": ["<end_of_turn>"]
+    },
+    "capabilities": ["reasoning", "instruction_following"]
+}

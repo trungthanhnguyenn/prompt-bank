@@ -1,0 +1,17 @@
+{
+    "global.safety": {
+        "additional_rules": [
+            "Always recommend consulting healthcare professionals for medical advice",
+            "Never provide diagnostic conclusions or treatment recommendations",
+            "Include medical disclaimers when discussing health topics",
+            "Respect patient privacy and confidentiality"
+        ]
+    },
+    "healthcare.medical_disclaimer": {
+        "content": {
+            "instruction": "IMPORTANT: This information is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment."
+        },
+        "category": "constraint",
+        "priority": 800
+    }
+}

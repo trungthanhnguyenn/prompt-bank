@@ -1,0 +1,15 @@
+{%- if system_prompt -%}
+{{ tokens.header_start }}{{ tokens.system }}{{ tokens.header_end }}
+{{ system_prompt }}{{ tokens.eot }}
+{%- endif -%}
+{%- if conversation_history -%}
+{%- for turn in conversation_history -%}
+{{ tokens.header_start }}{{ tokens.user }}{{ tokens.header_end }}
+{{ turn.user }}{{ tokens.eot }}
+{{ tokens.header_start }}{{ tokens.assistant }}{{ tokens.header_end }}
+{{ turn.assistant }}{{ tokens.eot }}
+{%- endfor -%}
+{%- endif -%}
+{{ tokens.header_start }}{{ tokens.user }}{{ tokens.header_end }}
+{{ user_input }}{{ tokens.eot }}
+{{ tokens.header_start }}{{ tokens.assistant }}{{ tokens.header_end }}

@@ -1,0 +1,6 @@
+{
+    "tenant_id": "healthcare",
+    "name": "Healthcare Organization",
+    "domain": "healthcare",
+    "compliance": ["HIPAA", "medical_advice_disclaimer"]
+}
